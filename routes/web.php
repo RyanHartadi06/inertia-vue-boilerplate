@@ -24,10 +24,14 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('/roles')->middleware('permission:view roles')->group(function () {
         Route::get('/', 'Role\RoleController@index')->name('roles.index');
+        Route::get('/create', 'Role\RoleController@create')->name('roles.create')->middleware('permission:create roles');
+        Route::post('/store', 'Role\RoleController@store')->name('roles.store')->middleware('permission:create roles');
         Route::get('/{role}', 'Role\RoleController@show')->name('roles.show');
         Route::get('/{role}/edit', 'Role\RoleController@edit')->name('roles.edit')->middleware('permission:edit roles');
         Route::put('/{role}/update', 'Role\RoleController@update')->name('roles.update')->middleware('permission:edit roles');
+        Route::delete('/{role}', 'Role\RoleController@destroy')->name('roles.destroy')->middleware('permission:delete roles');
     });
+
 
     Route::prefix('/periods')->middleware('permission:view periods')->group(function () {
         Route::get('/', 'PerformanceIndicator\PeriodController@index')->name('periods.index')->middleware('permission:view periods');

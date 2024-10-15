@@ -71,9 +71,7 @@ export default {
                                     />
                                 </Link>
                             </div>
-                            <p class="mt-3 fs-15 fw-medium">
-                                HCMS - PT Surabaya Industrial Estate Rungkut
-                            </p>
+                            <p class="mt-3 fs-15 fw-medium">Velzon</p>
                         </div>
                     </BCol>
                 </BRow>
@@ -216,9 +214,8 @@ export default {
                     <BCol lg="12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">
-                                &copy; {{ new Date().getFullYear() }} HCMS.
-                                <i class="mdi mdi-heart text-danger"></i> PT
-                                Surabaya Industrial Estate Rungkut
+                                &copy; {{ new Date().getFullYear() }}
+                                <i class="mdi mdi-heart text-danger"></i> Velzon
                             </p>
                         </div>
                     </BCol>

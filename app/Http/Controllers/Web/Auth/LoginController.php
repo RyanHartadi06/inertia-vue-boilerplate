@@ -16,7 +16,7 @@ class LoginController extends Controller
     /**
      * @var string
      */
-    protected $redirectTo = 'dashboard';
+    protected $redirectTo = 'account';
 
     /**
      * @return \Inertia\Response
@@ -32,16 +32,15 @@ class LoginController extends Controller
     protected function login(LoginRequest $request)
     {
         $user = User::where('username', $request->username)->first();
-        
+
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::guard('web')->login($user, $request->filled('remember'));
-            
+
             // return to previous route if exists use ternary 
-            return redirect()->intended($this->redirectTo ?? route('dashboard'));
+            return redirect()->intended($this->redirectTo ?? route('account'));
         }
 
         return redirect()->back()->with('error', 'Password is not valid');
-
     }
 
     /**

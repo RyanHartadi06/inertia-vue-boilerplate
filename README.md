@@ -1,7 +1,9 @@
-# SIER HCMS
-HCMS - PT Surabaya Industrial Estate Rungkut
+# Velzon
+
+Velzon
 
 ## Requirement
+
 -   Laravel 10+
 -   NPM
 -   Composer
@@ -11,13 +13,14 @@ HCMS - PT Surabaya Industrial Estate Rungkut
 -   Inertia.js
 
 ### Default Account
+
 `Backoffice`
-| Super Admin / IT |                    |
+| Super Admin / IT | |
 | ---------------- | ------------------ |
-| url              | /                  |
-| role             | Super Admin        |
-| us               | superadmin@sier.id |
-| ps               | `password`         |
+| url | / |
+| role | Super Admin |
+| us | superadmin@sier.id |
+| ps | `password` |
 
 | Admin |               |
 | ----- | ------------- |
@@ -27,6 +30,7 @@ HCMS - PT Surabaya Industrial Estate Rungkut
 | ps    | `password`    |
 
 ## Instalation
+
 -   Clone repository from `develop` branch
 -   `composer install`
 -   `cp .env.example .env`
@@ -39,10 +43,10 @@ HCMS - PT Surabaya Industrial Estate Rungkut
 -   `npm run build` on `server`
 
 ### On Cpanel
+
 Because `php artisan storage:link` cannot run in cpanel. <br />
 Run this instead
 
 ```bash
 ln -s /home/USERNAME/public_html/DIRECTORY/hcms/storage/app/public public/storage
 ```
-

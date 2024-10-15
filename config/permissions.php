@@ -7,14 +7,18 @@ return [
             'view users',
             'edit users',
             'view roles',
+            'create roles',
             'edit roles',
+            'delete roles',
         ]
-    ], [
+    ],
+    [
         'name' => 'Dashboard',
         'permissions' => [
             'view dashboard',
         ]
-    ], [
+    ],
+    [
         'name' => 'Periode',
         'permissions' => [
             'view periods',
@@ -22,7 +26,8 @@ return [
             'edit periods',
             'delete periods',
         ]
-    ], [
+    ],
+    [
         'name' => 'Satuan Indikator',
         'permissions' => [
             'view indicator units',
@@ -30,7 +35,8 @@ return [
             'edit indicator units',
             'delete indicator units',
         ]
-    ], [
+    ],
+    [
         'name' => 'Panduan',
         'permissions' => [
             'view guides',
