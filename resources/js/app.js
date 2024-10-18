@@ -30,7 +30,7 @@ AOS.init({
 import moment from "moment";
 
 createInertiaApp({
-    title: (title) => (title ? `${title} - HCMS PT SIER` : "HCMS - PT. SIER"),
+    title: (title) => (title ? `${title} - Velzon` : "Velzon"),
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
