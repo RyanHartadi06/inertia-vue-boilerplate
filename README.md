@@ -19,15 +19,15 @@ Velzon
 | ---------------- | ------------------ |
 | url | / |
 | role | Super Admin |
-| us | superadmin@sier.id |
+| us | superadmin@admin.id |
 | ps | `password` |
 
-| Admin |               |
-| ----- | ------------- |
-| url   | /             |
-| role  | Admin         |
-| us    | admin@sier.id |
-| ps    | `password`    |
+| Admin |                |
+| ----- | -------------- |
+| url   | /              |
+| role  | Admin          |
+| us    | admin@admin.id |
+| ps    | `password`     |
 
 ## Instalation
 
@@ -48,5 +48,5 @@ Because `php artisan storage:link` cannot run in cpanel. <br />
 Run this instead
 
 ```bash
-ln -s /home/USERNAME/public_html/DIRECTORY/hcms/storage/app/public public/storage
+ln -s /home/USERNAME/public_html/DIRECTORY/{folder}/storage/app/public public/storage
 ```

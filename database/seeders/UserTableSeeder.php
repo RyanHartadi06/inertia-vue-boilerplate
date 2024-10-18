@@ -22,16 +22,16 @@ class UserTableSeeder extends Seeder
 
         $superadmin = User::create([
             'name'      => RoleType::SUPER_ADMIN,
-            'email'     => 'superadmin@sier.id',
-            'username'  => 'superadmin@sier.id',
+            'email'     => 'superadmin@admin.id',
+            'username'  => 'superadmin@admin.id',
             'password'  => Hash::make('password'),
         ]);
         $superadmin->assignRole(RoleType::SUPER_ADMIN);
 
         $admin = User::create([
             'name'      => RoleType::ADMIN,
-            'email'     => 'admin@sier.id',
-            'username'  => 'admin@sier.id',
+            'email'     => 'admin@admin.id',
+            'username'  => 'admin@admin.id',
             'password'  => Hash::make('password'),
         ]);
         $admin->assignRole(RoleType::ADMIN);
