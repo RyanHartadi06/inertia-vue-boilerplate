@@ -6,6 +6,7 @@ use App\Enums\RoleType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\IndexRequestByName;
 use App\Http\Requests\Web\User\UpdateUserRequest;
+use App\Models\User\Filters\RoleFilter;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -20,10 +21,12 @@ class UserController extends Controller
      */
     public function index(IndexRequestByName $request)
     {
-        $filters = [];
+        $filters = [
+            new RoleFilter(),
+        ];
 
         $resources = User::with('roles')
-            ->filterResource($request, ['name', 'email', 'username'], $filters)
+            ->filterResource($request, ['name'], $filters)
             ->orderBy($request->get('sort', 'name'), $request->get('order', 'asc'))
             ->paginate($request->per_page);
 
@@ -74,6 +77,6 @@ class UserController extends Controller
     {
         $user->syncRoles($request->roles);
 
-        return redirect()->route('users.index')->with('success', 'Data updated successfully');   
+        return redirect()->route('users.index')->with('success', 'Data updated successfully');
     }
 }

@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('images/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('images/logo.png') }}">
 
     <!-- Scripts -->
     @routes
