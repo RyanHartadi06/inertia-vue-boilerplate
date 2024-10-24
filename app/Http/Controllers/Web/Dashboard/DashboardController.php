@@ -12,7 +12,7 @@ class DashboardController extends Controller
         return inertia('Dashboard/Index', [
             'title'         => 'Dashboard',
             'pageTitle'     => 'Dashboard',
-            'description'   => 'Welcome to HCMS'
+            'description'   => 'Welcome to Velzon'
         ]);
     }
 }
