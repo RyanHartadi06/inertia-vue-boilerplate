@@ -25,7 +25,7 @@ class LoginController extends Controller
     {
         return Inertia::render('Auth/Login', [
             'title'         => 'Login Admin',
-            'description'   => 'Welcome to HCMS'
+            'description'   => 'Welcome '
         ]);
     }
 
